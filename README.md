@@ -22,6 +22,6 @@ Website BMFTI adalah website badan mahasiswa fakultas yang bertujuan untuk menge
 - Form pendaftaran pada website pendaftaran memliki fitur validasi input untuk menentukan apakah input yang dimasukkan sudah valid atau belum.
 
 ## Cara menjalankan:
-- Secara online: Kunjungi link -> 
+- Secara online: Kunjungi link -> https://valentino812.github.io/Website-BMFTI/index.html
 - Secara offline (tanpa git): tekan tombom "<>code" di kanan atas, lalu tekan tombol "download zip". Ekstrak zip dan masuk ke file index.html
 - Secara offline (dengan git): jalan command -> Git:clone https://github.com/Valentino812/Website-BMFTI.git
