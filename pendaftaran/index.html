@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BMFTI Pendaftaran</title>
+
+  <!-- Montserrat Font From Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Library for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="icon" href="../gambar/icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar start -->
+  <nav class="navbar">
+    <a class="brand" href="../index.html">
+      <img src="../gambar/logo-untar.png" alt="Logo">
+      <div class="brand-text">
+        <span>BADAN MAHASISWA</span>
+        <small>FAKULTAS TEKNOLOGI INFORMASI</small>
+      </div>
+    </a>
+    <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../index.html" class="menu-text">Beranda</a></li>
+      <li><a href="../tentang_kami/index.html" class="menu-text">Tentang</a></li>
+      <li><a href="../organisasi/index.html" class="menu-text">Organisasi</a></li>
+      <li><a href="../pendaftaran/index.html" class="button-cover">PENDAFTARAN</a></li>
+      <li><button id="toggleThemeBtn" class="theme-toggle-btn">☀️</button></li>
+    </ul>
+  </nav>
+  <!-- Navbar end -->
+
+  <div class="wrapper">
+  <!-- Register Form Start -->
+    <div class="register-section">
+      <!-- Background layer -->
+      <div class="register-background"></div>
+      <!-- Form Container --> 
+      <div class="register-form">
+        <h2>Pendaftaran</h2>
+        <p>Isi dengan menggunakan alamat email UNTAR.</p>
+        <form onsubmit="return validateRegisterForm(event)">
+          <div class="form-group-inline">
+            <div class="form-group">
+              <label for="first-name">Nama Depan</label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Nama Belakang</label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim" placeholder="Masukkan NIM anda" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Alamat Email</label>
+            <input type="email" id="email" name="email" placeholder="nama.nim@stu.untar.ac.id" required>
+          </div>
+          <!-- Degree Selection -->
+          <div class="form-group">
+            <label for="major">Jurusan</label>
+            <select id="major" name="major" required>
+              <option value="" disabled selected>Pilih Jurusan</option>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Sistem Informasi">Sistem Informasi</option>
+            </select>
+          </div>
+
+          <!-- Semester Selection -->
+          <div class="form-group">
+            <label for="semester">Semester</label>
+            <select id="semester" name="semester" required>
+              <option value="" disabled selected>Pilih Semester</option>
+              <option value="1">Semester 1</option>
+              <option value="2">Semester 2</option>
+              <option value="3">Semester 3</option>
+              <option value="4">Semester 4</option>
+              <option value="5">Semester 5</option>
+              <option value="6">Semester 6</option>
+              <option value="7">Semester 7</option>
+              <option value="8">Semester 8</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question">Motivasi Bergabung</label>
+            <textarea id="question" name="question" placeholder="Berikan alasan anda ingin bergabung dengan BMFTI" required></textarea>
+          </div>
+          <button type="submit">DAFTAR</button>
+        </form>
+      </div>
+    </div>
+    <!-- Register Form End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo-title">
+            <img src="../gambar/logo-untar.png" alt="Logo">
+            <h3 class="footer-title">BMFTI</h3>
+          </div>
+        </div>
+        <div class="footer-right">
+          <p class="social-label">KUNJUNGI SOSIAL MEDIA KAMI</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Badan Mahasiswa Fakultas Tekonologi Informasi Untar. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+  </div>
+
+  <!-- Modal Start -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-text">
+        <h2 id="modal-title-wrapper">
+            <span id="modal-title"></span>        
+            <span id="modal-icon"></span>
+        </h2>
+        <a id="modal-message"></a>
+      </div>
+    </div>
+  </div>
+  <!-- Modal End -->
+
+  <script src="script.js"></script>
+</body>
+</html>
